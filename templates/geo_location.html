@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+<h2>Find Geo Location</h2>
+<p>Click the button below to retrieve your current geographical location.</p>
+<form action="/run-geo-location" method="get">
+    <button type="submit">Find Location</button>
+</form>
+{% if result %}
+<div class="result">
+    <h3>Result:</h3>
+    <p>{{ result|safe }}</p>
+</div>
+{% endif %}
+{% endblock %}

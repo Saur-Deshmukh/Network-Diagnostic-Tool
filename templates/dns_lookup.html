@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block content %}
+<h2>DNS Lookup</h2>
+<p>Enter a domain name to perform a DNS lookup.</p>
+<form action="/run-dns-lookup" method="post">
+    <label for="domain">Domain:</label>
+    <input type="text" id="domain" name="domain" placeholder="e.g., example.com" required>
+    <button type="submit">Lookup</button>
+</form>
+{% if result %}
+<div class="result">
+    <h3>Result:</h3>
+    <p>{{ result|safe }}</p>
+</div>
+{% endif %}
+{% endblock %}

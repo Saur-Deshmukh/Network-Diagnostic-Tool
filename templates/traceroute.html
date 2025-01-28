@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block content %}
+<h2>Trace Route</h2>
+<p>Enter a website to trace the route to it.</p>
+<form action="/run-traceroute" method="post">
+    <label for="site">Website:</label>
+    <input type="text" id="site" name="site" placeholder="e.g., google.com" required>
+    <button type="submit">Trace Route</button>
+</form>
+{% if result %}
+<div class="result">
+    <h3>Result:</h3>
+    <p>{{ result|safe }}</p>
+</div>
+{% endif %}
+{% endblock %}

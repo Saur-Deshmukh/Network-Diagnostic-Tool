@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+<h2>Check Internet Connection</h2>
+<p>Click the button below to check your internet connection.</p>
+<form action="/run-check-connection" method="get">
+    <button type="submit">Check Connection</button>
+</form>
+{% if result %}
+<div class="result">
+    <h3>Result:</h3>
+    <p>{{ result }}</p>
+</div>
+{% endif %}
+{% endblock %}

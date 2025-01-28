@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Network Diagnostic Tool</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/check-connection">Check Connection</a></li>
+            <li><a href="/measure-speed">Measure Speed</a></li>
+            <li><a href="/get-ip">Get IP</a></li>
+            <li><a href="/geo-location">Geo Location</a></li>
+            <li><a href="/ping">Ping</a></li>
+            <li><a href="/traceroute">Trace Route</a></li>
+            <li><a href="/dns-lookup">DNS Lookup</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

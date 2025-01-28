@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+<h2>Get IP Address</h2>
+<p>Click the button below to retrieve your public IP address.</p>
+<form action="/run-get-ip" method="get">
+    <button type="submit">Get IP Address</button>
+</form>
+{% if result %}
+<div class="result">
+    <h3>Result:</h3>
+    <p>{{ result }}</p>
+</div>
+{% endif %}
+{% endblock %}

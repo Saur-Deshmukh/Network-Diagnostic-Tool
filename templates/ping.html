@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block content %}
+<h2>Ping a Website</h2>
+<p>Enter a website to send a ping request.</p>
+<form action="/run-ping" method="post">
+    <label for="site">Website:</label>
+    <input type="text" id="site" name="site" placeholder="e.g., google.com" required>
+    <button type="submit">Ping</button>
+</form>
+{% if result %}
+<div class="result">
+    <h3>Result:</h3>
+    <p>{{ result|safe }}</p>
+</div>
+{% endif %}
+{% endblock %}

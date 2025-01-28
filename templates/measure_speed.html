@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+<h2>Measure Network Speed</h2>
+<p>Click the button below to measure your network speed.</p>
+<form action="/run-measure-speed" method="get">
+    <button type="submit">Measure Speed</button>
+</form>
+{% if result %}
+<div class="result">
+    <h3>Result:</h3>
+    <p>{{ result|safe }}</p>
+</div>
+{% endif %}
+{% endblock %}
